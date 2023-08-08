@@ -1,0 +1,64 @@
+<!-- Below, please list all group members' full names and student IDs. -->
+<!-- 
+	Shania Muller 200270187 
+	Tsz Ting Kwong 200514830
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+	<title>Image Gallery | COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/gallery.css">
+	<script src="https://kit.fontawesome.com/e4fd6df5c5.js" crossorigin="anonymous"></script>
+
+	<script type="module" src="./js/galleryAnimation.js" defer></script>
+	<script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body>
+	<!-- <h1>Image Gallery</h1> -->
+	<section id="gallery" class="gallery">
+		<figure id="hero-wrap" class="hero-wrap">
+			<img id="hero-image" src="images/japan-large.jpg" alt="" />
+			<figcaption>
+				<div id="hero-date" class="hero-date">Apr 4</div>
+				<div id="hero-caption" class="hero-caption">The cherry blossoms in bloom in Hiroshima.</div>
+			</figcaption>
+		</figure>
+
+
+		<div id="btn-wrap" class="btn-wrap">
+			<div id="carousel-toast" class="carousel-toast collapse">
+				<div class="carousel-paper carousel-paper-off"></div>
+				<div class="btn-carousel btn-carousel-off"></div>
+			</div>
+
+			<div class="carousel-paper carousel-paper-on"></div>
+			<div id="btn-carousel" class="btn-carousel btn-carousel-on"></div>
+		</div>
+
+
+		<div id="carousel-wrap" class="carousel-wrap">
+			<!-- Left Arrow -->
+			<i class="fa-solid fa-arrow-left" id="left-arrow"></i>
+
+			<ul id="carousel" class="carousel"></ul>
+			<!-- Right arrow -->
+			<i class="fa-solid fa-arrow-right" id="right-arrow"></i>
+		</div>
+
+	</section>
+
+
+
+
+	<!-- PHOTO CREDITS: Unsplash -->
+</body>
+
+</html>

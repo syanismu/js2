@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+html{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 24px;
+    line-height: 2;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f8ff;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hero-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#hero-image{
+    width: 1000px;
+}
+
+.hero-wrap figcaption{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    margin: 2rem 0;
+}
+
+.hero-date{
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.hero-caption{
+    text-decoration: underline;
+    text-decoration-color: rgb(15, 130, 197);
+}
+
+.btn-wrap, .carousel-toast{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto 90px;
+    grid-template-rows: 1fr;
+    -ms-grid-column-align: end;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.carousel-toast{
+    bottom: 90px;
+    transform-origin: bottom left;
+    transform: scaleY(1);
+}
+
+.btn-carousel{
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    grid-column: 2 / span 1;
+    grid-row: 1 / 1;
+    justify-self: end;
+
+    transition: all 0.3s;
+}
+
+.btn-carousel-on{    
+    border-width: 50px 50px 0 0;
+    border-color: #5D7F8C transparent transparent transparent;
+    background-color: #f0f8ff;
+    transform-origin: top left;
+    transform: scaleY(1);
+}
+
+.btn-carousel-off{
+    border-width: 0 90px 90px 0;
+    border-color: transparent transparent #5D7F8C transparent;
+}
+
+.carousel-paper{
+    transition: all 0.3s;
+}
+
+.carousel-paper-on{
+    grid-column: 1 / span 2;
+    grid-row: 1 / 1;
+    
+    background-color: #f0f8ff;
+    transform-origin: bottom left;
+    transform: scaleY(0);
+}
+
+.carousel-paper-off{
+    background-color: #5D7F8C;
+    box-shadow: 0 0 10px #000;
+}
+
+.gallery:hover #btn-carousel, .btn-large{
+    /* Effect Folding */
+    border-width: 90px 90px 0 0;
+}
+
+
+.carousel-hide{
+    border-width: 0 0 0 0;
+}
+
+
+.carousel-wrap{
+    position: absolute;
+    bottom: -187px;
+    width: 100%;
+    margin: 0;
+    background-color: #f0f8ff;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.carousel{
+    display: flex;
+    flex-wrap: nowrap;
+
+    background-color: #f0f8ff;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); */
+    /* padding: 2rem 0; */
+    list-style: none;
+    
+}
+
+.carousel{
+    margin-left: 42px;
+}
+
+.carousel li{
+    line-height: 0;
+    padding: 2px;
+    margin: 0 5px;
+    border: 1px solid #2E2D2C;
+}
+
+.carousel li img{
+    filter: grayscale(1);
+}
+
+#left-arrow, #right-arrow{
+    font-size: 1.5rem;
+}
+
+.thumbnail{
+    width: 200px;
+}
+
+.collapse{
+    transform: scaleY(0);
+}
+
+.expand{
+    transform: scaleY(1);
+}
+
+.moveUp{
+    bottom: 0rem;
+}
+
+.btn-wrap.moveUp{
+    bottom: 100px;
+}
